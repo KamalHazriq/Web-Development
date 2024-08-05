@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript 2</title>
+
+	<script>
+		function createArray(){
+			var elements = prompt("Enter comma separated array values : ");
+			elements = elements.split(",");
+			document.write("array elements are : ");
+			for(i=0;i<elements.length;i++){
+				document.write(elements[i]+" ");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="click to create array" onclick="return createArray();">
+
+	<br><br>
+	<a href="../index.html">
+    <button>Go to Landing Page</button>
+  	</a><br><br>
+  	<a href="index.html">
+    <button>Go to Menu Page</button>
+  	</a>
+</body>
+</html>

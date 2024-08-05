@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 11 Lab Deliverables</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('background.gif'); 
+            background-size: cover; 
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .go {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 20px;
+            background-color: #FFA500;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        .glitch {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+             0.025em 0.04em 0 #fffc00;
+            animation: glitch 725ms infinite;
+        }
+
+        .glitch span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    .glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+    .glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+    
+    @keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
+  }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="glitch">WEEK 11 LAB : JAVASCRIPT</h1>
+    
+
+    <a class="go" href="../index.html">GO TO LANDING PAGE</a>
+
+    <h1 class="glitch">BASIC JAVASCRIPT</h1>
+
+    <div id="basicJSLinks">
+        <a class="go" href="ex1.html">ex1.html</a>
+        <a class="go" href="ex2.html">ex2.html</a>
+        <a class="go" href="ex4.html">ex4.html</a>
+        <a class="go" href="ex5.html">ex5.html</a>
+        <a class="go" href="ex8.html">ex8.html</a>
+        <a class="go" href="ex12.html">ex12.html</a>
+    </div>
+
+    <h1 class="glitch">ADVANCED JAVASCRIPT</h1>
+
+    <div id="advancedJSLinks">
+        <a class="go" href="exjs5.html">exjs5.html</a>
+        <a class="go" href="exjs8.html">exjs8.html</a>
+        <a class="go" href="exjs9.html">exjs9.html</a>
+        <a class="go" href="exjs11.html">exjs11.html</a>
+        <a class="go" href="exjs15.html">exjs15.html</a>
+    </div>
+
+    <h1 class="glitch">EXTRACT MYCARD INFORMATION JAVASCRIPT</h1>
+    <a class="go" href="form.html">FORM</a>
+
+</body>
+
+</html>

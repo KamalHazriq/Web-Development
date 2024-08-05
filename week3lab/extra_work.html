@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week 3 Lab Deliverables</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor= "#d4d4dc">
+<table width="100%" border="0" cellpadding="20" cellspacing="1" align="center">
+  <tr>
+    <td colspan="2" bgcolor="#1d1e22">
+      <h1><font color="#feda6a" face="verdana">Week 3 Lab Task</font></h1>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#feda6a" width="200" height="600">
+      <object name="menu" type="text/html" data="menu.html" height="600" /> 
+    </td>
+    <td width="*" valign="top">
+      <font size="6" face="Lucida Console">Extra Work</font>
+      <hr>
+      <br>
+      <form action="http://lrgs.ftsm.ukm.my/users/a123456/week3Lab/validate_biodata.php" method="post" enctype="multipart/form-data">
+  <table border="1" cellpadding="10">
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" name="name" pattern="[a-zA-Z ]*" title= "Name must be in alphabet only" placeholder="Insert your name" autofocus required></td>
+    </tr>
+    <tr>
+      <td>Age:</td>
+      <td><input type="number" name="age" min="0" max="100" step="1" required></td>
+    </tr>
+    <tr>
+      <td>Sex:</td>
+      <td>
+         <input type="radio" id="male" name="sex" value="male" checked required>
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" id="female" name="sex" value="female" required>
+        <label for="female">Female</label>
+    </td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td><textarea name="address" cols="50" rows="5" placeholder="Insert your address" required></textarea>
+    </td>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+       <td><input type="email" name="email" pattern=".*ukm.*" title = "Email must contain 'ukm'" placeholder="Insert your email" required></td>
+    </td>
+    </tr>
+
+    <tr>
+      <td>Date of Birth:</td>
+      <td><input type="datetime-local" name="dob" autofocus>
+    </td>
+    </tr>
+
+    <tr>
+        <td>Height:</td>
+    <td>
+    <input type="range" name="height" id="heightId" min="100" max="200" value="150" oninput="outputId.value = heightId.value" required disabled>
+    <output id="outputId">150</output>
+    </td>
+    </tr>
+
+    <tr>
+      <td>Tel:</td>
+       <td><input type="tel" name="phone" pattern="(\+60|0060)\d{2}-\d{7,8}" title="Phone must start with +60 or 0060" placeholder="+60##-########" required>
+    </td>
+    </tr>
+
+    <tr>
+      <td>My Favourite Color:</td>
+      <td><input type="color" name="color" value="#008000" required></td>
+    </td>
+    </tr>
+
+    <tr>
+      <td>Fb/Tw/Ig:</td>
+      <td><input type="url" name="fbtwig" placeholder="Insert the URL" required></td>
+    </td>
+    </tr>
+
+    <tr>
+      <td>My Face Photo:</td>
+       <td><input type="file" name="photo" accept="image/*"  required></td>
+    </td>
+    </tr>
+
+    <tr>
+      <td>My University:</td>
+      <td><select name="university" required>
+    <option value="UKM">Universiti Kebangsaan Malaysia</option>
+    <option value="UM">Universiti Malaya</option>
+    <option value="UM">Universiti Putra Malaysia</option>
+    <option value="UM">Universiti Sains Malaysia</option>
+    <option value="UM">Universiti Teknologi Malaysia</option>
+    <!-- Add more universities here -->
+      </select>
+  </td>
+    </tr>
+    <!-- complete the rest of form here -->
+  </table>
+<hr>
+<input type="hidden" name="matricnum" value="a189646">
+<button type="submit" name="biodata_form">Submit My Biodata</button>
+<input type="reset" value="Reset">
+</form>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="black" align="center">
+      <footer style="color: #feda6a;font-family: Verdana;">
+        TP2543 - WEB PROGRAMMING
+      </footer>
+    </td>
+  </tr>
+</table>  
+
+</body>
+</html>
+

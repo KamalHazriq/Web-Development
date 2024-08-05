@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Week 4 Lab Deliverables</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor= "#d4d4dc">
+<table width="100%" border="0" cellpadding="20" cellspacing="1" align="center">
+  <tr>
+    <td colspan="2" bgcolor="#1d1e22">
+      <h1><font color="#feda6a" face="verdana">Week 4 Lab Task</font></h1>
+    </td>
+  </tr>
+  <tr>
+  <td bgcolor="#feda6a" width="200" height="600">
+       <object name="menu" type="text/html" data="menu.html" height="600" /> 
+    </td>
+    <td width="*" valign="top">
+      <h2><font face = "Verdana">Hello, feel free to press one of the tabs on the table to see my week 4 tasks!</font></h2>
+      <h3><font face = "Verdana">This week , I learnt all of the following :</font></h3>
+      <ul>
+          <br>
+          <li>How to validate a form  (<a href="bio_form.php">bio_form.php</a>)</li>
+          <br>
+          <li>How to populate data in a form (<a href="edit_bio.php">edit_bio.php</a>)</li>
+          <br>
+          <li>How to populate data in a form (<a href="lecturers_list.php">lecturers_list.php</a>)</li>
+        </ul>
+
+        <h3>Here's a random cat to make your day! <br>
+        Click the pic for more!</h3>
+
+        <a href="https://www.youtube.com/shorts/agJ0CvXXNRo" target="https://www.youtube.com/shorts/agJ0CvXXNRo">
+                <img src="cutecat1.gif" alt="cat week4"  style="margin: 25px;">
+            </a>
+
+         <h3>Here's some music for Dr to listen while going through my tasks!</h3>
+        <audio controls autoplay loop src="elevator.mp3" autobuffer volume="0.1">
+    Your browser does not support the audio element.
+        </audio>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="black" align="center">
+      <footer style="color: #feda6a;font-family: Verdana;">
+        TP2543 - WEB PROGRAMMING
+      </footer>
+    </td>
+
+  </tr>
+</table>
+
+
+<script>
+function setCookie(c_name, value, exdays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+    document.cookie = c_name + "=" + c_value;
+}
+
+function getCookie(c_name) {
+    var i, x, y, ARRcookies = document.cookie.split(";");
+    for (i = 0; i < ARRcookies.length; i++) {
+        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g, "");
+        if (x == c_name) {
+            return unescape(y);
+        }
+    }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+
+function update() {
+    if (!played) {
+        if (tillPlayed) {
+            song.currentTime = tillPlayed;
+            song.play();
+            played = true;
+        } else {
+            song.play();
+            played = true;
+        }
+    }
+    setCookie('timePlayed', song.currentTime);
+}
+
+setInterval(update, 1000);
+</script>
+
+</body>
+</html>
+
+

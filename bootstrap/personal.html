@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <style>
+    .bg-1 {
+      background-color: #f4511e; /* Orange */
+      color: #ffffff;
+    }
+    .bg-2 {
+      background-color: #333399; /* Dark Blue */
+      color: #ffffff;
+    }
+    .bg-3 {
+        background-color: #ffffff; /* White */
+        color: #555555;
+    }
+    .container-fluid {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+  .bg-4 {
+    background-color: #2f2f2f;
+    color: #ffffff;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  body {
+  font: 14px "Montserrat", sans-serif;
+  line-height: 1.8;
+}
+
+.img-circle {
+      border-radius: 50%;
+      display: block; /* This ensures that the border-radius is applied correctly */
+      margin: auto;   /* Center the image */
+      object-fit: cover; /* Crop the photo while maintaining aspect ratio */
+    }
+
+  </style>
+
+</head>
+<body id="myPage">
+
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">Me</a>
+
+      <a class="navbar-brand" href="../index.html">Landing Page</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="#hello">Hello</a></li>
+        <li><a href="#who">Who</a></li>
+        <li><a href="#where">Where</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+ <div class="container-fluid bg-1 text-center" id="hello">
+<h3>Hello</h3>
+<img src="me.jpeg" class="img-circle" alt="Myself" width="30%" height="20%" >
+<h3>I'm Kamal Hazriq</h3>
+ </div>
+
+ <div class="container-fluid bg-2 text-center" id="who">
+  <h3>Who Am I?</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>I am currently a third year degree student in Computer Science (Software Technology) in UKM.</p>
+      <br>
+       <img src="image1.jpg" class="img-responsive" alt="Image" style="display:inline" width= 70% height= 70%>
+    </div>
+    <div class="col-sm-4">
+      <p>My home is at Gombak, Selangor but I am currently staying at Kolej Ibrahim Yaakub , UKM.</p>
+      <br>
+       <img src="image2.jpg" class="img-responsive" alt="Image" style="display:inline" width= 70% height= 70%>
+    </div>
+    <div class="col-sm-4">
+      <p>My hobby is playing volleyball. I started playing volleyball back in 2018 and represented my faculty and college in University Sports Events.</p>
+       <img src="image3.jpg" class="img-responsive" alt="Image" style="display:inline" width= 70% height= 70%>
+    </div>
+    </div>
+</div>
+ 
+<div class="container-fluid bg-3 text-center" id="where">
+  <h3>Where To Find Me?</h3>
+  <p>Physically, you can find me at Kolej Ibrahim Yaakub or anywhere in UKM. I may also be spotted in Kolej Pendeta Zaaba if I'm eating or playing volleyball at their court. You can also find me online on social media. Feel free to click on the buttons below to go to the pages</p>
+
+  <!-- Button 1 -->
+  <a href="https://www.instagram.com/kamalhazriq_" class="btn btn-default btn-lg">
+    <img src="instagram.png" alt="Instagram"width="35" height="20" > Instagram
+  </a>
+
+  <!-- Button 2 -->
+  <a href="https://www.linkedin.com/in/muhammad-kamal-hazriq-mohammad-aswan-2b1b54198/" class="btn btn-default btn-lg">
+    <img src="linkedin.png" alt="Linkedin" width="20" height="20"> LinkedIn
+  </a>
+
+</div>
+
+
+<div class="container-fluid" style="background-color: #dddddd" id="contact">
+  <h3 class="text-center">Contact Me</h3>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact me and I'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Bangi, Selangor</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +6019-2634050</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> kamalhazriq@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> a189646@siswa.ukm.edu.my</p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid bg4 text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright © Kamal Hazriq 2023</p>
+</footer>
+
+</body>
+</html>

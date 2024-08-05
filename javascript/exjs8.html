@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript 2.8</title>
+	<script>
+		
+	function createArray(para1,para2,para3,para4,para5){
+		var arr = [para1,para2,para3,para4,para5];
+		var ele =document.getElementById('text');
+		if(ele !== null){
+			ele.innerHTML=arr;
+		}
+	}
+	</script>
+
+</head>
+<body>
+
+<p id ="text"></p>
+<input type="button" onclick="return createArray(2,4,8,77,21)" value ="click me to check output">
+
+
+<br><br>
+	<a href="../index.html">
+    <button>Go to Landing Page</button>
+  	</a><br><br>
+  	<a href="index.html">
+    <button>Go to Menu Page</button>
+  	</a>
+</body>
+</html>

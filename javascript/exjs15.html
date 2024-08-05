@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript 2.15</title>
+
+	<script>
+		
+	function manipulateArray(){
+		var arr=[22,63,-95,-87,68,-43];
+		document.write("Before manipulation"+"<br>"+arr+"<br>");
+		for(i=0;i<arr.length;i++){
+			if(arr[i]<0){
+				arr[i] = -arr[i];
+			}
+			else{
+				continue;
+			}
+		}
+		document.write("After manipulation"+"<br>"+arr);
+	}
+
+	</script>
+
+</head>
+<body>
+
+<input type="button" onclick="return manipulateArray()" value="click me to check output">
+
+
+<br><br>
+	<a href="../index.html">
+    <button>Go to Landing Page</button>
+  	</a><br><br>
+  	<a href="index.html">
+    <button>Go to Menu Page</button>
+  	</a>
+  	
+</body>
+</html>

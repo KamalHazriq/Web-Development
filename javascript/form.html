@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Form Validation</title>
+
+  <style>
+
+    input, textarea, select,a {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0px 10px 0px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font: 100% Lucida Sans, Verdana;
+}
+ 
+body {
+  font: 100% Lucida Sans, Verdana;
+  background-color: skyblue;
+}
+ 
+label {
+  font-weight: bold;
+}
+ 
+input[type=submit], input[type=reset], button ,a.go-to-landing, a.menu{
+  background-color: maroon;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center; /* Center the text */
+}
+
+
+
+  </style>
+
+  <script>
+    
+    function check_mycard(){
+      var mycard = document.getElementById('id_mycard');
+      var dob = document.getElementById('id_dob');
+      var state = document.getElementById('id_state');
+      var sex = document.getElementById('id_sex');
+
+      if (mycard.value == "") {
+      // show a pop up box says "Please insert your MyCard number"
+        alert("Please insert your MyCard number");
+      // put cursor inside the MyCard textbox
+        mycard.focus();
+      return false;
+      }
+
+      var patt = new RegExp(mycard.getAttribute('pattern'));
+      isValid = patt.test(mycard.value);
+      if(isValid){
+        // do something here
+        mycard = mycard.value.split("-");
+      var dob_year = mycard[0].slice(0, 2);
+      var dob_month = mycard[0].slice(2, 4);
+      var dob_day = mycard[0].slice(4, 6);
+
+      dob.value = dob_day + '/' + dob_month + '/' + dob_year;
+
+      var stateValue = mycard[1].slice(0,2);
+      setSelectedValue(state,stateValue);
+
+      var genderDigit = mycard[2].slice(-1);
+      if(isEven(genderDigit)){
+        setSelectedValue(sex,"f");
+      }else{
+        setSelectedValue(sex,"m");
+      }
+      }      
+      else {
+        alert("Please insert a correct MyCard number");
+      mycard.focus();
+      } 
+    }
+
+    function setSelectedValue(selectObj, valueToSet) {
+  for (var i = 0; i < selectObj.options.length; i++) {
+    if (selectObj.options[i].value == valueToSet) {
+      selectObj.selectedIndex = i; // Set the selectedIndex instead of selected property
+      return;
+    }
+  }
+}
+
+  function isEven(value) {
+    if (value % 2 == 0)
+      return true;
+    else
+      return false;
+  }
+
+  </script>
+
+</head>
+
+<body>
+ 
+<form action="#" method="post">
+  <label for="id_name">Name:</label>
+  <input type="text" name="name" id="id_name" required>
+   
+  <label for="id_mycard">MyCard Number:</label>
+  <div><input type="text" name="mycard" id="id_mycard" style="width: 80%" required placeholder="Example: 000000-00-0000" pattern="^\d{6}-\d{2}-\d{4}$">
+  <button type="button" name="search" id="is_search" style="width:19%" onclick="return check_mycard()">Validate MyCard</button></div>
+   
+  <label for="id_dob">DOB:</label>
+<input type="text" name="dob" id="id_dob" required placeholder="dd/mm/yy" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{2}$">
+
+   
+  <label for="id_state">State of Birth:</label>
+  <select name="state" id="id_state" required>
+    <option>Select</option>
+      <option value="01">Johor</option>
+      <option value="02">Kedah</option>
+      <option value="03">Kelantan</option>
+      <option value="04">Melaka</option>
+      <option value="05">Negeri Sembilan</option>
+      <option value="06">Pahang</option>
+      <option value="08">Perak</option>
+      <option value="09">Perlis</option>
+      <option value="07">Pulau Pinang</option>
+      <option value="12">Sabah</option>
+      <option value="13">Sarawak</option>
+      <option value="10">Selangor</option>
+      <option value="11">Terengganu</option>
+      <option value="14">Wilayah Persekutuan - Kuala Lumpur</option>
+      <option value="15">Wilayah Persekutuan - Labuan</option>
+      <option value="16">Wilayah Persekutuan - Putrajaya</option>
+  </select>
+   
+  <label for="id_sex">Sex:</label>
+  <select name="place" id="id_sex" required>
+    <option>Select</option>
+    <option value="m">Male</option>
+    <option value="f">Female</option>
+  </select>
+   
+  <label for="id_myself">Describe About Yourself:</label>
+  <textarea name="myself" id="id_myself" rows="5" required></textarea>
+ 
+  <input type="submit" name="js_form" value="Submit">
+  <input type="reset">
+
+   <a href="../index.html" class="go-to-landing">Go to Landing Page</a>
+    <a href="index.html" class="menu">Go to Menu Page</a>
+
+
+</form>
+ 
+</body>
+</html>
